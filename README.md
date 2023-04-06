@@ -35,7 +35,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 TDD <a name="about-project"></a>
+# 📖 BlogApp <a name="about-project"></a>
 
 **BlogApp** is a classic example of a blog website. It is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
  <!-- <img src="#" alt="app-demo" /> -->
