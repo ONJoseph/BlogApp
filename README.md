@@ -164,6 +164,6 @@ Hat tip to anyone whose code was used.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/ONJoseph/BlogApp/blob/project1/LICENCE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
