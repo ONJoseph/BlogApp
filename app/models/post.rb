@@ -9,6 +9,8 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).first(5)
   end
 
+  private
+
   def update_post_count
     author.increment!(:post_count)
     update_column(:post_count, author.post_count)
