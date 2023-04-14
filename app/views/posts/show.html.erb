@@ -1,1 +1,9 @@
-<h2>"Find here a list of posts for a given user"</h2>
+<div class="posts_index_container">
+  <%= render @post %>
+
+  <div>
+    <%= link_to new_user_post_comment_path(@user.id, @post.id) do %>
+      <%= button_tag 'Add new comment', type: 'button' %>
+    <% end %>
+  </div>
+</div>

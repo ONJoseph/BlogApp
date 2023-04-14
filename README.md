@@ -1,9 +1,7 @@
-
 <a name="readme-top"></a>
 
 <div align="center">
 
-  <img src="./" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h2><b>BlogApp</b></h2>
@@ -37,7 +35,12 @@
 
 # 📖 BlogApp <a name="about-project"></a>
 
-**BlogApp** is a classic example of a blog website. It is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+**BlogApp** is a classic example of a blog website. With fully functional website that show the list of posts and empower readers to interact with them by adding comments and liking posts.
+ - **User**
+ - **Post**
+ - **Comment**
+ - **Like** 
+
  <!-- <img src="#" alt="app-demo" /> -->
 
  </br>
@@ -97,9 +100,76 @@
 
 ### Prerequisites
 
-### Setup
+Everything will be based on the ERD class diagram presented below. 
+
+<!-- </br>
+ <div align="center">
+   <kbd>
+    <img alt="gif" src="https://user-images.githubusercontent.com/80895497/143606720-cc2cd9bd-2909-44f0-b2ea-8056741679c4.gif" width=100% />
+    <p>Catalog of my things Console App</p>
+   </kbd>
+</div> -->
+
+</br>
+ <div align="center">
+    <img alt="gif" src="./public/blogApp.png" width=50% />
+    <p>Entity Relationship Diagram (ERD) of Blog App project</p>
+</div>
+
+## Getting Started
+To run the project locally, copy up and running follow these simple example steps :
+
+ - First of all make sure you have both `Ruby` & `Rails` installed in your machine
+ (else You can install `Rails` just with this simple command  ```gem install rails```)
+```
+$ git clone ### Setup
 - Clone this repository to your computer: git clone https://github.com/ONJoseph/BlogApp.git
-- Open the project on your code editor: "code BlogApp"
+```
+ - Then go to the right folder 
+```
+$ cd BlogApp
+```
+```
+$ bundle
+```
+and run to install npm package
+```
+$ npm install
+```
+
+make sure the database is up and running.
+```
+$ rails db:create
+```
+When you will add migration file then, you can add command like
+```
+$ rails db:migrate
+```
+Run this command line to add some dummy data
+```
+$ rails db:seed
+```
+
+ - Finaly run `rails s` and visit http://localhost:3000/  in your browser!
+
+ ## Run tests :
+
+ To run Request specs locally you need just to run this following command in your terminal :
+
+ ```
+ $ bundle exec rspec
+ ```
+ </br>
+ <div align="center">
+    <kbd>
+    <img alt="gif" src="https://user-images.githubusercontent.com/80895497/144337923-8f5660a0-6e8a-4ba4-99a5-c6ab42bb3b73.png" width=90% />
+    <p>16 Request Specs passed</p>
+       </kbd>
+</div>
+
+
+
+
 
 ### Install
 - Write: bundle install

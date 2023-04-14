@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 10vh;
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@import url("userIndex");
+@import url("userShow");
+@import url("postIndex");
+@import url("postShow")

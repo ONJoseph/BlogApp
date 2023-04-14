@@ -1,1 +1,12 @@
-<h2>"Find here specific post by id"</h2>
+<div class="posts_index_container">
+  <%= render @user %>
+  <%= render @posts %>
+
+  <div>
+    <%= link_to new_user_post_path(@user.id) do %>
+      <%= button_tag 'Add new post', type: 'button' %>
+    <% end %>
+  </div>
+
+  <%= button_tag 'Pagination', type: 'button' %>
+</div>
