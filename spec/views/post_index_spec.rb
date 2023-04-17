@@ -52,4 +52,11 @@ RSpec.describe 'Users index page', type: :feature do
       expect(page).to have_content 'Pagination'
     end
 
+    it 'When I click on a post, it should redirects me to that posts show page.' do
+      click_on 'Hello1'
+      expect(page).to have_current_path user_post_path(@user.id, @post.id)
+    end
+  end
+end
+
     
