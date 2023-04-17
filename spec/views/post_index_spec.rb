@@ -52,4 +52,3 @@ RSpec.describe 'Users index page', type: :feature do
       expect(page).to have_content 'Pagination'
     end
 
-    
