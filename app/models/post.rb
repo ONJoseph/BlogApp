@@ -1,16 +1,16 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  has_many :comments
+  has_many :comments, -> { includes(:author).order(created_at: :desc) }
   has_many :likes
 
   after_save :update_post_counter
 
   def all_comments
-    comments.includes([:author]).order(created_at: :desc)
+    comments
   end
 
   def five_most_recent_comments
-    comments.order(created_at: :desc).first(5)
+    comments.limit(5)
   end
 
   def update_post_counter
