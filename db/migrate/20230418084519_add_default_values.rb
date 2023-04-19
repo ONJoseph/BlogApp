@@ -1,4 +1,4 @@
-class AddDefaultValuesToTables < ActiveRecord::Migration[7.0]
+class AddDefaultValues < ActiveRecord::Migration[7.0]
   def up
     change_column_default :users, :post_count, 0
     change_column_default :posts, :comments_count, 0
