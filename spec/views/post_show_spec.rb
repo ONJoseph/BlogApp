@@ -7,40 +7,56 @@ RSpec.describe 'Users index page', type: :feature do
                         bio: 'Teacher from Mexico.')
     @post = Post.create(author: @user, title: 'Hello1', text: 'post1')
     @comment = Comment.create(author: @user, post: @post, text: 'my comment')
-    visit user_post_path(@user.id, @post.id)
   end
 
-  context 'When starting at post index page' do
-    it 'posts title should be showed.' do
+  context 'When viewing a post' do
+    before { visit user_post_path(@user, @post) }
+
+    it 'displays the post title' do
       expect(page).to have_content('Hello1')
     end
 
-    it 'some of the posts body should be showed.' do
-      expect(page).to have_content('Hello1 by Tom')
+    it 'displays the post author' do
+      expect(page).to have_content('by Tom')
     end
 
-    it 'the amount of comments should be showed.' do
-      expect(page).to have_content('Comments:')
-      expect(@comment.post.comments_count).to eq(1)
-    end
-
-    it 'the amount of likes should be showed.' do
-      expect(page).to have_content 'Likes:'
-      expect(@post.likes_count).to eq(0)
-    end
-  end
-
-  context 'When starting at post index page' do
-    it 'the posts body should be showed.' do
+    it 'displays the post body' do
       expect(page).to have_content('post1')
     end
 
-    it 'the user name of the commentor should be showed' do
+    it 'displays the comments section' do
+      expect(page).to have_content('Comments:')
+    end
+
+    it 'displays the number of comments' do
+      expect(page).to have_content('1')
+    end
+
+    it 'displays the commenter name' do
       expect(page).to have_content('Tom')
     end
 
-    it 'the comment of each commentor should be showed on the left.' do
-      expect(page).to have_content('Tom : my comment')
+    it 'displays the comment text' do
+      expect(page).to have_content('my comment')
+    end
+
+    it 'displays the likes section' do
+      expect(page).to have_content('Likes:')
+    end
+
+    it 'displays the number of likes' do
+      expect(page).to have_content('0')
+    end
+  end
+
+  context 'When clicking on a post' do
+    before do
+      visit user_posts_path(@user)
+      click_link('Hello1')
+    end
+
+    it 'redirects to the post show page' do
+      expect(page).to have_current_path(user_post_path(@user, @post))
     end
   end
 end

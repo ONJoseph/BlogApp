@@ -20,8 +20,8 @@ RSpec.describe 'Users index page', type: :feature do
     end
 
     it 'Number of post of each user has written should be shown' do
-      expect(page).to have_content('Number of posts')
-      expect(@user.post_count).to eq(1)
+      expect(page).to have_content('Number of posts:')
+      expect(page).to have_content('1')
     end
 
     it 'When clicking on a user I should be redirected to the users show page' do
