@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./blogapp.png" alt="logo" width="256"  height="auto" />
+  <img src="./draft.png" alt="logo" width="256"  height="auto" />
   <br/>
 
   <h2><b>BlogApp</b></h2>
@@ -191,6 +191,12 @@ $ rails db:seed
 - GitHub: [@ONJoseph](https://github.com/ONJoseph)
 - Twitter: [@ONJoseph1](https://twitter.com/ONJoseph1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/o-n-joseph-ba8425147/)
+
+👤 **Francisco Quintero**
+
+- GitHub: [@HunterX-7](https://github.com/HunterX-7)
+- Twitter: [@franquin07](https://twitter.com/franquin07)
+- LinkedIn: [Francisco Quintero](https://www.linkedin.com/in/francisco-asis-quintero-cede%C3%B1o/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
